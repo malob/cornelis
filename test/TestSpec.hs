@@ -24,7 +24,7 @@ broken :: SpecWith a -> SpecWith a
 broken = before_ pending
 
 spec :: Spec
-spec = focus $ parallel $ do
+spec = focus $ do
   diffSpec "should refine" (Seconds 5) "test/Hello.agda"
       [ Swap "unit = ?" "unit = one"] $ \w _ -> do
     goto w 11 8
