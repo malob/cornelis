@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         # Keep in sync with `ghcVersions` in `../../flake.nix`.
-        ghc: ['8107', '924', '944']
+        ghc: ['8107', '926', '944']
 
     name: Build package (ghc${{ matrix.ghc }})
     runs-on: ${{ inputs.os }}
